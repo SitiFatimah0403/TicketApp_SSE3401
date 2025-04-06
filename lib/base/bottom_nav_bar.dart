@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:ticket_app_223846/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -11,8 +12,8 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0; // Step 1: Track selected index
 
-  final List<Widget> appScreen = const [
-    Center(child: Text("Home")),
+  final appScreen = const [
+    HomeScreen(),
     Center(child: Text("Search")),
     Center(child: Text("Tickets")),
     Center(child: Text("Profile")),
@@ -22,15 +23,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
     setState(() {
       _selectedIndex = index; // Step 2: Update index on tap
       print("Tapped index is $_selectedIndex"); //To trace the index
-    });
+    }, //setState = to change the state of something ( update the UI )
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("My ticket"),
-      ),
+      appBar: AppBar(title: const Text("My ticket")),
       body: appScreen[_selectedIndex], //Step 3: Show selected screen
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex, //Track current index
