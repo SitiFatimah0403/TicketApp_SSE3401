@@ -30,7 +30,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("My ticket")),
+  
       body: appScreen[_selectedIndex], //Step 3: Show selected screen
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex, //Track current index
