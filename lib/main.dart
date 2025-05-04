@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:ticket_app_223846/base/bottom_nav_bar.dart';
+import 'package:ticket_app_223846/base/utils/app_routes.dart';
+import 'package:ticket_app_223846/screens/all_tickets.dart';
+import 'package:ticket_app_223846/screens/home/all_hotels.dart';
+import 'package:ticket_app_223846/screens/hotel_details.dart';
+import 'package:ticket_app_223846/screens/search/search_screen.dart';
+import 'package:ticket_app_223846/screens/ticket/ticket_screen.dart';
 
 void main() {
 
@@ -28,13 +35,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp( //must have to holding screen
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 153, 110, 227)),
-      ),
-      home: BottomNavBar(),
+      routes: {
+        AppRoutes.homePage: (context) => BottomNavBar(),
+        AppRoutes.allTickets: (context) => AllTickets(),
+        AppRoutes.ticketScreen:(context) => const TicketScreen(),
+        AppRoutes.allHotels:(context) => const AllHotels(),
+        AppRoutes.hotelDetail :(context) => const HotelDetail(),
+      },
     );
   }
 }

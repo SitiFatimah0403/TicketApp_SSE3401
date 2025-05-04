@@ -4,7 +4,7 @@ import 'package:ticket_app_223846/base/res/styles/app_style.dart';
 class TextStyleForth extends StatelessWidget {
   final String text;
   final TextAlign align;
-  const TextStyleForth({super.key, required this.text, this.align= TextAlign.start});
+  const TextStyleForth({super.key, required this.text, this.align= TextAlign.start, bool? isColor});
 
   @override
   Widget build(BuildContext context) {

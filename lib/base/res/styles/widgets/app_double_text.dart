@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ticket_app_223846/base/res/styles/app_style.dart';
 
 class AppDoubleText extends StatelessWidget {
-  const AppDoubleText({Key? key, required this.bigText, required this.smallText}) : super(key: key);
+  const AppDoubleText({Key? key, required this.bigText, required this.smallText, required Future<Object?> Function() func}) : super(key: key);
 
   final String bigText;
   final String smallText;

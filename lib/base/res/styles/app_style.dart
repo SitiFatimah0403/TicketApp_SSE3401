@@ -1,37 +1,55 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ticket_app_223846/base/res/styles/app_style.dart';
-import 'package:ticket_app_223846/base/res/styles/widgets/app_double_text.dart';
 
-Color primary = const Color(0xFF687daf);
-
-class AppStyles {
+Color primary = const Color (0xFF687daf);
+class AppStyles{
   static Color primaryColor = primary;
-  static Color bgColor = Color(0xFFeeeedF2);
-
-  static Color textColor = Color(0xFF3b3b3b);
+  static Color bgColor = const Color(0XFFeeedf2);
+  static Color textColor = const Color(0xFF3b3b3b);
   static Color ticketBlue = const Color(0xFF526799);
-  static Color ticketOrange = const Color(0xFFF37B67);
-  static TextStyle textStyle= TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
-  static TextStyle headLineStyle1 = TextStyle(
-    fontSize: 26,
-    fontWeight: FontWeight.bold,
-    color: textColor,
+  static Color ticketOrange =const Color(0xFFF37B67);
+  static Color kakiColor = const Color (0xFFd2bdb6);
+  static Color ticketTabColor = const Color(0xFFF4F6FD);
+  static Color planeColor = const Color(0xFFBFC2DF);
+  static Color findTicketColor =const Color(0xD91130CE);
+  static Color circleColor = const Color(0xFF189999);
+  static Color ticketColor = const Color(0xFFFFFFFF);
+  static Color dotColor = const Color(0xFF8ACCF7);
+  static Color planeSecondColor = const Color(0xFFBACCF7);
+  static Color profileLocationColor = const Color(0xFFFEF4F3);
+  static Color profileTextColor = const Color(0xFF526799);
+
+
+  static TextStyle textStyle = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      color: textColor //make it dynamic widget
   );
 
-  static TextStyle headLineStyle2 = TextStyle(
-    fontSize: 21,
+  static TextStyle headLineStyle1 = TextStyle(
+    fontSize: 26,
     fontWeight: FontWeight.bold,
     color: textColor
   );
 
-  static TextStyle headLineStyle3 = TextStyle(
-    fontSize: 17,
-    fontWeight: FontWeight.w500,
+  static TextStyle headLineStyle2 = TextStyle( //static widget
+    fontSize: 21,
+    fontWeight: FontWeight.bold,
+      color: textColor
+  );
+
+  static TextStyle headLineStyle3 = const TextStyle(
+      fontSize: 17,
+      fontWeight: FontWeight.w500,
   );
 
   static TextStyle headLineStyle4 = TextStyle(
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: FontWeight.w500,
+    color: Colors.grey.shade500,
+  );
+
+    static TextStyle headLineStyle5 = const TextStyle(
+      fontSize: 17,
+      fontWeight: FontWeight.w500,
   );
 }
